@@ -97,7 +97,7 @@ Disassembly of section socket:
        ...
  ```
 
-## EXAMPLE EXPLANATION
+## EXAMPLES EXPLANATION
 ### return 
 Discard all packets received on the socket or accept all packets (if you change `return 0` to `return -1`).
 
@@ -106,7 +106,7 @@ Accept only icmp echo reply packets. Execute `sudo ./icmpreply` and ping your ma
 
 ### udpport
 Accept only udp packets from a fixed port (1030). 
-On a first terminal execute `./udpport`. On a second terminal execute `nc -u -p 1031 localhost 55555` and then `nc -u -p 1031 localhost 55555` to see the difference.
+On a first terminal execute `./udpport`. On a second terminal execute `nc -u -p 1031 localhost 55555` and then `nc -u -p 1030 localhost 55555` to see the difference.
 
 ### udportmap
 The eBPF program dynamically modifies the udp src allowed port accordingly to what the userspace program writes on a shared hash map. 
